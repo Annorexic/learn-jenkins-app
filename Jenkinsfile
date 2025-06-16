@@ -30,6 +30,7 @@ pipeline {
             }           
             steps{
             sh '''
+            npm install --save-dev @babel/plugin-transform-private-property-in-object
             test -f build/index.html
             npm test
             '''
